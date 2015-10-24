@@ -13,15 +13,17 @@ require(gtools) # if running standalone
 # raw downloads from TCGA portal are in inst/extdata/
 setwd(system.file("extdata", "", package="bayesCC", mustWork=TRUE))
 
+# cleaned up the following a little bit from the original... --tjt 
+#
 # mRNA expression
-GE <- read.csv("BRCA.exp.348.med.csv", row.names = 1)
+GE <- read.csv("BRCA.exp.348.med.csv.gz", row.names = 1)
 names(GE) <- substr(names(GE), 1, 16)
 
 # Impute missing mRNA expression values 
 Exp.mat <- impute.knn(as.matrix(GE))$data 
 
 # microRNA expression
-miRNA <- read.csv("BRCA.348.precursor.txt", row.names = 1)
+miRNA <- read.csv("BRCA.348.precursor.txt.gz", row.names = 1)
 names(miRNA) <- substr(names(miRNA), 1, 16)
 miRNA.mat <- as.matrix(miRNA[,names(GE)])
 
@@ -29,16 +31,15 @@ miRNA.mat <- as.matrix(miRNA[,names(GE)])
 miRNA.mat <- miRNA.mat[rowSums(miRNA.mat == 0) < ncol(miRNA.mat) * 0.5, ]
 
 # protein expression via RPPA 
-RPPA <- read.table("rppaData-403Samp-171Ab-Trimmed.txt", head=T, row.names=1)
+RPPA <- read.table("rppaData-403Samp-171Ab-Trimmed.txt.gz", head=T, row.names=1)
 names(RPPA) <- substr(names(RPPA), 1, 16)
 RPPA.mat <- as.matrix(RPPA[,names(GE)])
 
 # DNA methylation
-Meth <- read.table("BRCA.Methylation.574probes.802.txt", row.names = 1)
+Meth <- read.table("BRCA.Methylation.574probes.802.txt.gz", row.names = 1)
 names(Meth) <- substr(names(Meth), 1, 16)
 Meth.mat <- as.matrix(Meth[,names(GE)])
 
-# cleaned up the following a little bit from the original... --tjt 
 allTheSame <- function(...) {
   eq1 <- function(x) base::identical(x, list(...)[[1]])
   return(all(unlist(lapply(list(...), eq1)) == TRUE) )
