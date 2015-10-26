@@ -84,27 +84,13 @@ for the case when entire columns are NA or mostly-NA (*cough* TARGET *cough*)
   runK <- function(k) bayesCC(BRCAData, K=k, IndivAlpha=T, maxiter=10000)
   Results <- mclapply(Ks, runK)
 
-  # compute adherences
-  meanAlphaStar <- c()
-  upperAlphaStar <- c()
-  lowerAlphaStar <- c()
+  # ?alphaStar
+  alphaStarDist <- data.frame(lapply(Results, alphaStar))
+  boxplot(alphaStarDist, main="Mean-adjusted adherence by K (optimal: K=3)")
 
-  for (k in Ks) {
-    i <- names(Ks)[which(Ks == k)]
-    AlphaRaw <- (Results[[i]]$AlphaVec[,2000:10000] - 1 / k) / (1 - 1 / k)
-    AlphaStar <- apply(AlphaRaw, 2, mean)
-    meanAlphaStar[i] <- mean(AlphaStar)
-    upperAlphaStar[i] <- quantile(AlphaStar, 0.975)
-    lowerAlphaStar[i] <- quantile(AlphaStar, 0.025)
-  }
-
-  # Plot AlphaStar (mean adjusted adherence) values for each K
-  plotCI(Ks, meanAlphaStar, ui = upperAlphaStar, li = lowerAlphaStar,
-         xlab = "Number of clusters (K)", ylab = "Mean adjusted adherence")
-  # Maximized when K=3
 }
 }
 \seealso{
-demo/TCGA_Application.r
+alphaStar
 }
 
