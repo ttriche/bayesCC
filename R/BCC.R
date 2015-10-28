@@ -6,5 +6,4 @@
 #' @seealso bayesCC
 #' 
 #' @export 
-#' 
 BCC <- bayesCC

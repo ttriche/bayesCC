@@ -5,5 +5,4 @@
 #' @return    a numeric value
 #' 
 #' @export 
-#' 
 logSum <- function(l) max(l) + log(sum(exp(l - max(l))))

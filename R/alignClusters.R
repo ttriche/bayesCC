@@ -7,7 +7,6 @@
 #' @return either a vector or a matrix, depending upon the value of "type" 
 #'
 #' @export 
-#' 
 alignClusters <- function(Z1, Z2, type=NULL) {
 
   if (is.null(type)) {

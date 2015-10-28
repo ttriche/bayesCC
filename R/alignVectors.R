@@ -6,7 +6,6 @@
 #' @return    A vector of the same length as Z2 
 #' 
 #' @export 
-#' 
 alignVectors <- function(Z1, Z2, ...) { 
   for (k in 1:length(unique(Z1))) {
     Max <- sum(Z1 == k & Z2 == k)/(0.01 + sum(Z2 == k) + sum(Z1 == k))

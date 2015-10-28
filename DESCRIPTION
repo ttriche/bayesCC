@@ -1,20 +1,27 @@
 Package: bayesCC
 Type: Package
-Title: Bayesian consensus clustering 
-Version: 0.3
-Date: 2015-10-26
+Title: Bayesian consensus clustering
+Version: 0.4
+Date: 2015-10-28
 Author: Eric F. Lock
 Maintainer: Tim Triche, Jr. <tim.triche@gmail.com>
-Description: Loosely coupled clustering over multiple data types. 
-Depends: impute, gtools, gplots
-Suggests: vioplot, parallel
+Description: Loosely coupled clustering over multiple data types.
+Depends:
+    impute,
+    gtools,
+    gplots
+Suggests:
+    vioplot,
+    parallel
 VignetteBuilder: knitr
 License: MIT
-Collate: alignMatrices.R 
-         alignVectors.R  
-         alignClusters.R
-         alphaStar.R
-         logSum.R
-         bayesCC.R
-         BCC.R
-         BRCAData.R
+Collate:
+    alignMatrices.R
+    alignVectors.R
+    alignClusters.R
+    alphaStar.R
+    logSum.R
+    bayesCC.R
+    BCC.R
+    BRCAData.R
+RoxygenNote: 5.0.0

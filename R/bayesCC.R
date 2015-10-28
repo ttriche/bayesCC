@@ -74,7 +74,6 @@
 #' @seealso alphaStar
 #'
 #' @export
-#'
 bayesCC <- function(X, K=2, a=1, b=1, IndivAlpha=FALSE, mu0=list(), a0=list(), 
                     b0 = list(), Concentration = 1, maxiter = 1000, ...) {
 

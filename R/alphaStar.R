@@ -19,7 +19,6 @@
 #' }
 #' 
 #' @export
-#'
 alphaStar <- function(Results) {
   
   requiredFields <- c("AlphaVec", "Cbest") 

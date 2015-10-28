@@ -6,7 +6,6 @@
 #' @return    A matrix of the same dimensions as Z2.
 #' 
 #' @export 
-#' 
 alignMatrices <- function(Z1, Z2) { 
   for (k in 1:dim(Z1)[2]) {
     for (tempk in 1:dim(Z2)[2]) {
