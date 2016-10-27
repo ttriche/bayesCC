@@ -1,7 +1,7 @@
 Package: bayesCC
 Type: Package
 Title: Bayesian consensus clustering
-Version: 0.4
+Version: 0.5
 Date: 2015-10-28
 Author: Eric F. Lock
 Maintainer: Tim Triche, Jr. <tim.triche@gmail.com>
@@ -10,6 +10,8 @@ Depends:
     impute,
     gtools,
     gplots
+Imports:
+    NNLM
 Suggests:
     vioplot,
     parallel
@@ -24,4 +26,6 @@ Collate:
     bayesCC.R
     BCC.R
     BRCAData.R
-RoxygenNote: 5.0.0
+    jointNMF.R
+    earlyReduction.R
+RoxygenNote: 5.0.1
