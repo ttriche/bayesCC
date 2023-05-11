@@ -15,4 +15,3 @@ a numeric value
 \description{
 convenience function
 }
-

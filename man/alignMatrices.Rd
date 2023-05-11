@@ -17,4 +17,3 @@ A matrix of the same dimensions as Z2.
 \description{
 Align matrices of cluster labels.
 }
-

@@ -19,4 +19,3 @@ either a vector or a matrix, depending upon the value of "type"
 \description{
 Align cluster label vectors or cluster label matrices as needed
 }
-

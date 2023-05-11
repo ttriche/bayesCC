@@ -4,8 +4,19 @@
 \alias{BCC}
 \title{alias to bayesCC(...)}
 \usage{
-BCC(X, K = 2, a = 1, b = 1, IndivAlpha = FALSE, mu0 = list(),
-  a0 = list(), b0 = list(), Concentration = 1, maxiter = 1000, ...)
+BCC(
+  X,
+  K = 2,
+  a = 1,
+  b = 1,
+  IndivAlpha = FALSE,
+  mu0 = list(),
+  a0 = list(),
+  b0 = list(),
+  Concentration = 1,
+  maxiter = 1000,
+  ...
+)
 }
 \description{
 For backwards compatibility, bayesCC(...) can be called as BCC(...). 
@@ -14,4 +25,3 @@ All parameters are the same (including the NumDraws/maxiter patch).
 \seealso{
 bayesCC
 }
-

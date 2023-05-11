@@ -4,8 +4,19 @@
 \alias{bayesCC}
 \title{Bayesian Consensus Clustering}
 \usage{
-bayesCC(X, K = 2, a = 1, b = 1, IndivAlpha = FALSE, mu0 = list(),
-  a0 = list(), b0 = list(), Concentration = 1, maxiter = 1000, ...)
+bayesCC(
+  X,
+  K = 2,
+  a = 1,
+  b = 1,
+  IndivAlpha = FALSE,
+  mu0 = list(),
+  a0 = list(),
+  b0 = list(),
+  Concentration = 1,
+  maxiter = 1000,
+  ...
+)
 }
 \arguments{
 \item{X}{a list of data matrices, each with D_i rows & N columns.}
@@ -95,4 +106,3 @@ for the case when entire columns are NA or mostly-NA (*cough* TARGET *cough*)
 \seealso{
 alphaStar
 }
-

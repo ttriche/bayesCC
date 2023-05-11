@@ -3,7 +3,9 @@
 \name{BRCAData}
 \alias{BRCAData}
 \title{Data from TCGA BRCA paper, as used in Lock & Dunson, Bioinformatics 2013.}
-\format{a list of matrices}
+\format{
+a list of matrices
+}
 \source{
 \url{https://tcga-data.nci.nih.gov/docs/publications/brca_2012/}
 }
@@ -21,4 +23,3 @@ The matrices are as follows:
 \seealso{
 the raw files in inst/extdata and the script in demo/
 }
-

@@ -5,8 +5,14 @@
 \title{attempt a joint nonnegative matrix factorization of two matrices,
 as described in Wang et al. 2014, doi:10.1093/bioinformatics/btu679}
 \usage{
-jointNMF(mat1, mat2, findK = FALSE, howNA = c("both", "column", "row"),
-  viaCV = FALSE, fracNA = 0.2)
+jointNMF(
+  mat1,
+  mat2,
+  findK = FALSE,
+  howNA = c("both", "column", "row"),
+  viaCV = FALSE,
+  fracNA = 0.2
+)
 }
 \arguments{
 \item{mat1}{the first matrix}
@@ -25,4 +31,3 @@ jointNMF(mat1, mat2, findK = FALSE, howNA = c("both", "column", "row"),
 attempt a joint nonnegative matrix factorization of two matrices,
 as described in Wang et al. 2014, doi:10.1093/bioinformatics/btu679
 }
-

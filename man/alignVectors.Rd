@@ -17,4 +17,3 @@ A vector of the same length as Z2
 \description{
 Align vectors of cluster labels.
 }
-

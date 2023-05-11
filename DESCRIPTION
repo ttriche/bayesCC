@@ -1,8 +1,8 @@
 Package: bayesCC
 Type: Package
 Title: Bayesian consensus clustering
-Version: 0.5
-Date: 2015-10-28
+Version: 0.6
+Date: 2023-05-11
 Author: Eric F. Lock
 Maintainer: Tim Triche, Jr. <tim.triche@gmail.com>
 Description: Loosely coupled clustering over multiple data types.
@@ -11,7 +11,7 @@ Depends:
     gtools,
     gplots
 Imports:
-    NNLM
+    RcppML
 Suggests:
     vioplot,
     parallel
@@ -28,4 +28,5 @@ Collate:
     BRCAData.R
     jointNMF.R
     earlyReduction.R
-RoxygenNote: 5.0.1
+RoxygenNote: 7.2.3
+Encoding: UTF-8

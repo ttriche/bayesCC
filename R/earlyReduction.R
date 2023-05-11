@@ -28,12 +28,12 @@
 #' @return        a list with W, H, and K for each matrix if using NMF,
 #'                or a list with D, U, and V for each matrix if using SVD.
 #' 
-#' @import        NNLM 
-#'
+#' @import        RcppML
+#' 
 #' @export
 earlyReduction <- function(mat, how=c("NMF","SVD"), mat2=NULL, joint=FALSE,
                            findK=FALSE, howNA=c("both","column","row"), 
                            viaCV=FALSE, pctNA=0.2) {
   how <- match.arg(how) 
-  stop("not done yet")
+  stop("earlyReduction() should be using RcppML or singlet to run ARD!")
 }

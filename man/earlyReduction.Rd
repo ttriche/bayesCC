@@ -4,9 +4,16 @@
 \alias{earlyReduction}
 \title{do dimension reduction (via NMF or SVD) before Bayesian consensus clustering}
 \usage{
-earlyReduction(mat, how = c("NMF", "SVD"), mat2 = NULL, joint = FALSE,
-  findK = FALSE, howNA = c("both", "column", "row"), viaCV = FALSE,
-  pctNA = 0.2)
+earlyReduction(
+  mat,
+  how = c("NMF", "SVD"),
+  mat2 = NULL,
+  joint = FALSE,
+  findK = FALSE,
+  howNA = c("both", "column", "row"),
+  viaCV = FALSE,
+  pctNA = 0.2
+)
 }
 \arguments{
 \item{mat}{a matrix to decompose (columns are samples, rows are features)}
@@ -43,8 +50,7 @@ doi: 10.1093/bioinformatics/btu679) but in this case the ranks can only be
 estimated marginally.  Joint rank estimation (and, by extension, optimal 
 joint imputation for linked views) is an open research topic as best as we 
 can tell.  if anyone wants to send a patch we will gladly apply it and a 
-great many people will probably start using it thereafter.
+great many people will probably start using it thereafter. 
 
 if SVD, the rank will be whatever the data supports (i.e. min(nrow, ncol)).
 }
-
